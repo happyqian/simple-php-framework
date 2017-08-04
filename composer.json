@@ -1,0 +1,19 @@
+{
+    "name": "happyqian/simple-framework",
+    "description": "A simple php framework",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Neo",
+            "email": "happyqian123@gmail.com"
+        }
+    ],
+    "minimum-stability": "beta",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "sf\\": "src/",
+            "app\\": ""
+        }
+    }
+}

@@ -1,18 +1,19 @@
 <?php
 namespace app\controllers;
-class SiteController {
+use sf\web\Controller;
+class SiteController extends Controller {
 	public function actionTest()
     {
         echo 'success!';
     }
 
     public function actionIndex(){
-    	echo "action index";
+        $data = ['first' => 'awesome-php-zh_CN', 'second' => 'simple-framework'];
+        echo $this->toJson($data);
     }
 
     public function actionView()
     {
-        $body = 'Test body information   ';
-        require '../views/site/view.php';
+        $this->render('site/view',['body' => 'Test body information']);
     }
 }
